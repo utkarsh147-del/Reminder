@@ -1,0 +1,18 @@
+import os
+import datetime
+from plyer import notification
+rem=input("Enter the message for your reminder")
+h=int(input("Enter Hour of your reminder"))
+m=int(input("Enter Minute of your reminder"))
+amPm=str(input("am or pm?"))
+print("Your reminder is set")
+if(amPm=="pm"):
+    h=h+12
+while(1==1):
+    if(h==datetime.datetime.now().hour and m==datetime.datetime.now().minute):
+        notification.notify(
+            title="Your Reminder!!!\n",
+            message=rem,
+            timeout=10
+        )
+        break

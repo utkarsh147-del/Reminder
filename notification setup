@@ -1,0 +1,12 @@
+import time
+from plyer import notification
+
+rem=input("Please Type your reminder which you want to set\n")
+if __name__ == "__main__":
+    notification.notify(
+        title="Your Reminder!!!\n",
+        
+        message=rem,
+        timeout=10
+    )
+time.sleep(20)
